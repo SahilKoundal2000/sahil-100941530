@@ -1,0 +1,9 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/savvy-octagon-449801/sahil100941530/app:$COMMIT_SHA', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/savvy-octagon-449801/sahil100941530/app:$COMMIT_SHA']
+
+options:
+  logging: REGIONAL_USER_OWNED_BUCKET
