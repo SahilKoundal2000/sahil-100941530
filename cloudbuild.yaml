@@ -10,10 +10,13 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'app'
-      - '--image=us-central1-docker.pkg.dev/savvy-octagon-449801/sahil100941530/app:$COMMIT_SHA'
-      - '--region=us-central1'
-      - '--platform=managed'
+      - 'sahil100941530'  # Cloud Run service name
+      - '--image'
+      - 'us-central1-docker.pkg.dev/savvy-octagon-449801/sahil100941530/app:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
       - '--allow-unauthenticated'
 
 options:
